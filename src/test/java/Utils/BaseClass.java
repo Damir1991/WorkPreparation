@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseClass {
 	public static WebDriver driver;
 	
-	public static void SetUp() throws InterruptedException{
+	public static void SetUp() throws InterruptedException,Exception{
 	System.setProperty("webdriver.chrome.driver","src\\test\\resourses\\Drivers\\chromedriver.exe");
 	
 	driver=new ChromeDriver(); //indirect object
@@ -19,7 +19,7 @@ public class BaseClass {
 	
 }
 	
-	public void CloseBrowser() {
+	public static void CloseBrowser() {
 		driver.quit();
 	}
 }
